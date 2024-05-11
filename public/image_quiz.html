@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fjord+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Luckiest+Guy&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+<!-- <link href="https://db.onlinewebfonts.com/c/b634e438d72c8b7e2e033f03ac054036?family=Happy+School" rel="stylesheet"> -->
+
+  </head>
+  <style>
+    body {
+     
+      font-family: "Fjord One", serif;
+      font-weight: 400;
+      font-style: normal;
+      background-image: url("background.jpg");
+      /*background-position: center top, right bottom;*/
+      background-size: cover;   
+    }
+
+  
+    
+    .card{
+    
+       /* background-image: linear-gradient(to left top, #6f18de, #8e3ae2, #a856e6, #be72eb, #d28df0);*/
+       background: #5D0168;
+       background: linear-gradient(135deg, #5D0168, #E23D04);;
+        color: whitesmoke;
+        font-size: 3vh;
+        font-weight: 600;
+    }
+    .card:hover{
+       /* background-image: linear-gradient(to right bottom, #b582f9, #bd84f7, #c587f4, #cc8af2, #d28df0);*/
+background: #AC26BC;
+background: linear-gradient(135deg, #AC26BC, #F14E15);
+cursor: pointer;
+
+    }
+    .main-container {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #exampleModalLabel{
+      font-family: "Happy School";
+      
+    }
+
+  </style>
+  <body>
+    <div class="container text-center box123">
+      <div class="d-flex flex-column mb-3">
+        <!-- <div class="p-2">
+          <img class="img-fluid" alt="you fucked up">
+        </div> -->
+        <div class="p-2">
+          <img class="img" alt="you fucked up"></div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex justify-content-evenly">
+            <div class="d-flex flex-row mb-3">
+              <div class="p-2">
+                <a value="1">
+                <div class="card">
+                  <div class="card-body">
+                    Hit option 1
+                  </div>
+                </div>
+              </a>
+              </div>
+              <div class="p-2">
+                <a value="2">
+                <div class="card">
+                <div class="card-body">
+                  Hit option 2
+                </div>
+              </div>
+            </a>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex justify-content-evenly">
+            <div class="d-flex flex-row mb-3">
+              <div class="p-2">
+                <a value="3">
+                <div class="card">
+                  <div class="card-body">
+                    Hit option 3
+                  </div>
+                </div>
+              </a>
+              </div>
+              <div class="p-2">
+                <a value="4">
+                <div class="card">
+                <div class="card-body">
+                  Hit option 4
+                </div>
+              </div>
+            </a>
+            </div>
+            </div>
+          </div>
+        </div>
+  
+<!-- Modal --> 
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title fs-5" id="exampleModalLabel"></h4>
+       
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      
+    </div>
+  </div>
+</div>
+        <!-- <div class="p-2">Flex item 3</div> -->
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        let ans
+        let totalQuestionCount
+        let i = 1
+        let correct_ans_count = 0
+        let wrong_ans_count = 0
+        const encouraging_message = [' Wow, you really dug deep to find that answer! Great job!', ' That was a tricky one, but you tackled it head-on and conquered it!', ' Your progress is impressive! Keep pushing your boundaries and learning new things.', " This answer shows how much you've been growing! I'm so proud of your development.", " Look at you go! You're becoming more confident and skilled with each challenge.", " That's the spirit! Keep challenging yourself and you'll achieve amazing things.", ' I knew you had the potential to solve this! You never cease to amaze me.', ' Your ability to think critically and creatively is truly inspiring. Keep shining!', " Don't ever doubt your intelligence and problem-solving skills. You're capable of anything you set your mind to.", ' Interested in exploring this topic further? I have some resources you might find helpful.', " Ready for the next challenge? I'm here to support you every step of the way.", " Remember, even the smartest minds need help sometimes. Don't hesitate to ask if you get stuck.", ' That answer reminds me of about perseverance and success.', " You're like a real-life detective! Your ability to piece together information is impressive.", " I wish I had your problem-solving skills! You're a natural at it."]
+
+
+
+        load_imageQuestions(i)
+        function load_imageQuestions(i) {
+          $.ajax({
+            type: "GET",
+            url: "/questions",
+            success: function (response) {
+            //  console.log(response);
+               totalQuestionCount  = Object.keys(response).length;
+              const questionImageData = response[i]["question_image"]["data"];
+              if (questionImageData) {
+                try {
+                  var b64encoded = btoa(String.fromCharCode.apply(null, questionImageData));
+                  var datajpg = "data:image/jpg;base64," + b64encoded;
+                  //console.log(datajpg)
+                  const imageElement = document.querySelector("img");
+                  if (imageElement) {
+                    imageElement.setAttribute("src", datajpg);
+                   // console.log(base64ImageData);
+                  } else {
+                    console.warn("Image element with class 'img' not found");
+                  }
+                } catch {
+                }
+              }
+              ans = response[i]["ans_id"];
+              //console.log(ans);
+            },
+            error: function (error) {
+              console.error("Error fetching questions:", error);
+            }
+          });
+        }
+
+        document.querySelectorAll("a").forEach((e) => {
+          e.addEventListener("click", () => {
+            let msg_no = Math.floor(Math.random() * encouraging_message.length);
+            if (e.getAttribute("value") == ans) {
+              document.querySelector("#exampleModalLabel").style.color = "rgb(9, 146, 16)"
+              correct_ans_count +=1
+              console.log(correct_ans_count)
+              $('#exampleModal').modal('show')
+
+              document.querySelector("#exampleModalLabel").textContent = encouraging_message[msg_no]
+
+            } else {
+              document.querySelector("#exampleModalLabel").style.color = "#b80909"
+              wrong_ans_count +=1
+              console.log(wrong_ans_count)
+              $('#exampleModal').modal('show')
+
+              document.querySelector("#exampleModalLabel").textContent = encouraging_message[msg_no]
+
+            }
+            i += 1
+            load_imageQuestions(i)
+            if((wrong_ans_count+correct_ans_count) === totalQuestionCount){
+              console.log("hurray completed")
+              set_playerResult()
+              window.location.href = "result.html"
+            }
+          })
+          })
+
+        function sleep(miliseconds) {
+          var currentTime = new Date().getTime();
+
+          while (currentTime + miliseconds >= new Date().getTime()) {
+          }
+        }
+
+        function myFunction(x) {
+          if (x.matches) { 
+            document.querySelector(".box123").classList.remove("container")
+            document.querySelector(".box123").classList.remove("text-center")
+
+
+          } else {
+            document.querySelector(".box123").classList.add("container")
+            document.querySelector(".box123").classList.add("text-center")
+          }
+        }
+
+        var x = window.matchMedia("(max-width: 800px)")
+
+        myFunction(x);
+
+        x.addEventListener("change", function () {
+          myFunction(x);
+        });
+
+        function set_playerResult(){
+          $.ajax({
+              type: "GET",
+              url: "/result",
+              dataType: "json",
+              contentType: "application/json",
+              data:{"player_name":sessionStorage.getItem("player_name"),"wrong_ans":wrong_ans_count,"correct_ans":correct_ans_count,"game_code":sessionStorage.getItem("game-code")},
+              success: function (response) {
+                console.log(response);
+        }, error: function(jqXHR, textStatus, errorThrown) {
+          console.error("Error:", textStatus, errorThrown);
+          // Handle errors during the request (optional)
+      }
+      })
+      }      
+
+      console.log(wrong_ans_count)
+      console.log(correct_ans_count)
+
+    </script>
+  </body>
+</html>
